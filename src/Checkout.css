@@ -1,0 +1,51 @@
+body {
+    background-color: rgb(234, 237, 237);
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+}
+
+/* .checkout {
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    /* height: max-content; */
+/* } */ */
+.checkout-content {
+    display: flex; /* Uncomment this line */
+    /* flex-direction: row; */
+    justify-content: space-between;
+  }
+  
+  .checkout-content {
+    display: flex;
+}
+
+.checkout-left {
+    background-color: white;
+    padding: 20px;
+    width: 80%; /* Set width to 50% to display side by side */
+    height: 100vh;
+    margin: 20px 20px;
+}
+
+.checkout-right {
+    background-color: white;
+    padding: 20px;
+    width: 20%; /* Set width to 50% to display side by side */
+    height: 30vh;
+    margin: 20px 20px;
+    margin-left: -2px;
+}
+
+.checkout-ad{
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    
+}
+
+.checkout-title{
+    margin-right: 10px;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+}
