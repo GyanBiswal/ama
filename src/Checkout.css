@@ -24,7 +24,7 @@ body {
     background-color: white;
     padding: 20px;
     width: 80%; /* Set width to 50% to display side by side */
-    height: 100vh;
+    height:max-content;
     margin: 20px 20px;
 }
 
