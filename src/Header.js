@@ -15,18 +15,20 @@ const [{ basket }, dispatch] = useStateValue();
             <img className='header-logo' src={logo} alt="" />
         </Link>
         <div className="header-search">
-            <input className='header-search-input' type="text" />
+            <input className='header-search-input' type="text" placeholder='Search Amazon.in'/>
             <SearchIcon className='header-searchIcon'/>
         </div>
         <div className="header-nav">
-            <div className="header-option">
-                <span className="option-1">
-                    Hello Guest
-                </span>
-                <span className="option-2">
-                    Sign in
-                </span>
-            </div>
+            <Link to = '/login'>
+                <div className="header-option">
+                    <span className="option-1">
+                        Hello Guest
+                    </span>
+                    <span to='/login' className="option-2">
+                        Sign in
+                    </span>
+                </div>
+            </Link>
             <div className="header-option">
                 <span className="option-1">
                     Returns
