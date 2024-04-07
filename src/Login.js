@@ -1,19 +1,31 @@
 import React , {useState} from 'react'
 import './Login.css'
 import logo2 from './images/amazon-logo-2.png'
-import { Link } from 'react-router-dom'
+import { Link  , useNavigate} from 'react-router-dom'
+// import { auth } from './firebase'
+import {app} from './firebase'
+import {getAuth , createUserWithEmailAndPassword} from 'firebase/auth'
 
 function Login() {
+    const auth = getAuth();
+    const navigate = useNavigate();
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
     const signIn = e => {
         e.preventDefault();
     }
-
-    const register = e => {
-        e.preventDefault();
-    }
+    
+    const register = () => {
+        // e.preventDefault();
+        createUserWithEmailAndPassword(auth , email , password
+        ).then((value) => {
+            if(auth){
+                navigate('/')
+            }
+        })
+        .catch(error => alert(error.message))
+    };
 
   return (
     <div className='login-header'>
